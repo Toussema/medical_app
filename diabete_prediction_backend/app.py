@@ -72,6 +72,11 @@ def validate_input(data):
     
     return True, ""
 
+@app.route("/health", methods=["GET"])
+def health():
+    return jsonify({"status": "ok", "service": "diabetes-prediction"})
+
+
 @app.route("/predict", methods=["POST"])
 def predict():
     try:
