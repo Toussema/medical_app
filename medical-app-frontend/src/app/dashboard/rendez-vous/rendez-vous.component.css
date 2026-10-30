@@ -1,0 +1,60 @@
+/* src/app/rendez-vous/rendez-vous.component.css */
+.appoinment.section {
+  padding: 60px 0;
+}
+
+.title-color {
+  color: #1a3c34;
+  font-weight: 600;
+}
+
+.text-color {
+  color: #4a8f7c;
+}
+
+.btn-main {
+  background-color: #4a8f7c;
+  color: #fff;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.btn-main:hover {
+  background-color: #fc0000;
+}
+
+.btn-round-full {
+  border-radius: 50px;
+}
+
+.btn-round {
+  border-radius: 20px;
+}
+
+.form-control {
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.feature-icon i {
+  font-size: 40px;
+  color: #4a8f7c;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.badge {
+  padding: 8px 12px;
+  font-size: 0.9em;
+}
+
+.alert-info {
+  border-radius: 10px;
+}
