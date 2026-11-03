@@ -15,7 +15,7 @@ export class RendezVousService {
    * Récupère le token JWT depuis le localStorage
    */
   private getToken(): string {
-    return localStorage.getItem('auth_token') || '';
+    return localStorage.getItem('token') || '';
   }
 
   /**

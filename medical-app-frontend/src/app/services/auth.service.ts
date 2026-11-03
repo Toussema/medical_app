@@ -8,6 +8,7 @@ import { User } from '../models/user';
 import { Disponibilite } from '../models/disponibilites';
 import { RendezVous } from '../models/rendez-vous';
 import { Document } from '../models/document';
+import { environment } from '../../environments/environment';
 
 
 export interface Doctor {
@@ -22,7 +23,7 @@ export interface Doctor {
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:8080';
+  private apiUrl = environment.apiUrl;
   private currentUser: User | null = null;
 
   constructor(
