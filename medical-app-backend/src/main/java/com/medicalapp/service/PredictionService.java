@@ -50,8 +50,13 @@ public class PredictionService {
             prediction.setRole(role);
             prediction.setGender((String) patientData.get("gender"));
             prediction.setAge(((Number) patientData.get("age")).intValue());
-            prediction.setHypertension((Boolean) patientData.get("hypertension"));
-            prediction.setHeartDisease((Boolean) patientData.get("heart_disease"));
+            prediction.setHypertension(
+                ((Number) patientData.get("hypertension")).intValue() == 1
+            );
+
+            prediction.setHeartDisease(
+                ((Number) patientData.get("heart_disease")).intValue() == 1
+            );
             prediction.setSmokingHistory((String) patientData.get("smoking_history"));
             prediction.setBmi(((Number) patientData.get("bmi")).doubleValue());
             prediction.setHba1cLevel(((Number) patientData.get("HbA1c_level")).doubleValue());
