@@ -1,0 +1,9 @@
+[build]
+  base = "medical-app-frontend"
+  command = "npm run build -- --configuration production"
+  publish = "dist/medical-app-frontend"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
