@@ -63,18 +63,32 @@ public class SecurityConfig {
         return http.build();
     }
 
+    
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         logger.info("Configuring CORS Configuration Source");
+
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("http://localhost:4200"));
-        configuration.setAllowedMethods(List.of("*"));
+
+        configuration.setAllowedOrigins(List.of(
+            "http://localhost:4200",
+            "https://medical-management-predict.netlify.app"
+        ));
+
+        configuration.setAllowedMethods(List.of(
+            "GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"
+        ));
+
         configuration.setAllowedHeaders(List.of("*"));
+
         configuration.setAllowCredentials(true);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
+
         logger.info("CORS Configuration Source configured");
+
         return source;
     }
+
 }
